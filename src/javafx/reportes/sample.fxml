@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorReportes" prefHeight="768.0" prefWidth="1373.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.reportes.Controller">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/Reportes.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="comboBoxReportes" layoutX="788.0" layoutY="76.0" onAction="#actionCombo" prefHeight="33.0" prefWidth="292.0" promptText="seleccione su reporte" />
+      <Button fx:id="botonAceptar" layoutX="1099.0" layoutY="72.0" mnemonicParsing="false" onAction="#generarReportes" prefHeight="39.0" prefWidth="146.0" style="-fx-background-color: transparent;" />
+      <LineChart fx:id="chartBarras" layoutX="183.0" layoutY="141.0" prefHeight="329.0" prefWidth="550.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <PieChart fx:id="pieChart" layoutX="869.0" layoutY="152.0" prefHeight="306.0" prefWidth="375.0" />
+      <Button layoutY="14.0" mnemonicParsing="false" onAction="#loadInicio" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
